@@ -8,3 +8,10 @@
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 
 (setq prelude-theme 'sanityinc-tomorrow-bright)
+
+(blink-cursor-mode nil)
+(column-number-mode t)
+(global-display-line-numbers-mode t)
+(scroll-bar-mode -1)
+(size-indication-mode t)
+(tool-bar-mode nil)

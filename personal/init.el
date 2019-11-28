@@ -15,7 +15,13 @@
 (global-set-key (kbd "s-;") 'avy-goto-char)
 (global-set-key (kbd "s->") 'avy-goto-line)
 
-(prelude-require-packages '(dash-at-point robe enh-ruby-mode intero))
+(prelude-require-packages '(dash-at-point
+                            robe
+                            enh-ruby-mode
+                            intero
+                            lsp-mode
+                            lsp-ui
+                            neotree))
 
 (add-hook 'js2-mode-hook (lambda () (setq js2-basic-offset 2)))
 
@@ -24,3 +30,6 @@
 (add-hook 'ruby-mode-hook 'enh-ruby-mode)
 
 (add-hook 'elixir-mode-hook 'alchemist-mode)
+
+(setq neo-window-width 40)
+(setq neo-window-fixed-size nil)

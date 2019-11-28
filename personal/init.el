@@ -8,6 +8,8 @@
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 (setq prelude-auto-save nil)
 
+(setq whitespace-line-column 101) ;; limit line length
+
 (global-set-key (kbd "s-<") 'avy-goto-char-in-line)
 (global-set-key (kbd "s-:") 'avy-goto-word-1)
 (global-set-key (kbd "s-;") 'avy-goto-char)

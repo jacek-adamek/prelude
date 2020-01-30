@@ -37,6 +37,9 @@
 (global-set-key (kbd "H-b") 'helm-mini)
 (global-set-key (kbd "H-B") 'helm-buffers-list)
 (global-set-key (kbd "H-o") 'helm-find-files)
+(global-set-key (kbd "H-/") 'comment-dwim)
+(global-set-key (kbd "H-t") 'rspec-verify)
+(global-set-key (kbd "H-r") 'rspec-verify-single)
 
 (prelude-require-packages '(dash-at-point
                             robe
@@ -61,12 +64,6 @@
 (add-hook 'prelude-prog-mode-hook
           (lambda ()
             (guru-mode -1)) t)
-
-(add-hook 'rspec-mode-hook
-          (lambda ()
-            (local-set-key (kbd "H-T") 'rspec-verify)
-            (local-set-key (kbd "H-R") 'rspec-verify-single)
-            (local-set-key (kbd "H-M") 'rspec-verify-method)))
 
 (setq dumb-jump-selector 'helm)
 (dumb-jump-mode)

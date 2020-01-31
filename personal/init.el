@@ -40,6 +40,7 @@
 (global-set-key (kbd "H-/") 'comment-dwim)
 (global-set-key (kbd "H-t") 'rspec-verify)
 (global-set-key (kbd "H-r") 'rspec-verify-single)
+(global-set-key (kbd "H-R") 'rubocop-autocorrect-current-file)
 
 (prelude-require-packages '(dash-at-point
                             robe
@@ -49,7 +50,9 @@
                             lsp-ui
                             neotree
                             rspec-mode
-                            dumb-jump))
+                            dumb-jump
+                            rubocop
+                            bundler))
 
 (add-hook 'js2-mode-hook
           (lambda ()

@@ -42,6 +42,7 @@
 (global-set-key (kbd "H-t") 'rspec-verify)
 (global-set-key (kbd "H-r") 'rspec-verify-single)
 (global-set-key (kbd "H-R") 'rubocop-autocorrect-current-file)
+(global-set-key (kbd "H-g") 'keyboard-escape-quit)
 
 (defvar H-l-map (make-keymap) "Keymap for my bindings and functions (H-l)")
 (define-key global-map (kbd "H-l") 'H-l-global-prefix)

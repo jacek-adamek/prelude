@@ -43,14 +43,30 @@
 (global-set-key (kbd "H-r") 'rspec-verify-single)
 (global-set-key (kbd "H-R") 'rubocop-autocorrect-current-file)
 (global-set-key (kbd "H-g") 'keyboard-escape-quit)
+(global-set-key (kbd "H-SPC") 'set-mark-command)
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; H-l key map
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (defvar H-l-map (make-keymap) "Keymap for my bindings and functions (H-l)")
 (define-key global-map (kbd "H-l") 'H-l-global-prefix)
 (fset 'H-l-global-prefix H-l-map)
 
-(define-key H-l-map "p" 'magit-pull-from-pushremote)
-(define-key H-l-map "P" 'magit-push-current)
+(define-key H-l-map "f" 'neotree-find)
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; H-m key map
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(defvar H-magit-map (make-keymap) "Custom magit map")
+(define-key global-map (kbd "H-m") 'H-magit-global-prefix)
+(fset 'H-magit-global-prefix H-magit-map)
+
+(define-key H-magit-map "p" 'magit-pull-from-pushremote)
+(define-key H-magit-map "P" 'magit-push-current)
+(define-key H-magit-map "b" 'magit-branch-popup)
+(define-key H-magit-map "s" 'magit-stash-popup)
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (prelude-require-packages '(dash-at-point
                             robe

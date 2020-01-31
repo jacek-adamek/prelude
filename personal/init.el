@@ -33,6 +33,7 @@
 (global-set-key (kbd "H-N") 'neotree-projectile-action)
 (global-set-key (kbd "H-.") 'projectile-toggle-between-implementation-and-test)
 (global-set-key (kbd "H-q") 'delete-other-windows)
+(global-set-key (kbd "H-Q") 'delete-window)
 (global-set-key (kbd "H-s") 'magit-status)
 (global-set-key (kbd "H-b") 'helm-mini)
 (global-set-key (kbd "H-B") 'helm-buffers-list)
@@ -41,6 +42,14 @@
 (global-set-key (kbd "H-t") 'rspec-verify)
 (global-set-key (kbd "H-r") 'rspec-verify-single)
 (global-set-key (kbd "H-R") 'rubocop-autocorrect-current-file)
+
+(defvar H-l-map (make-keymap) "Keymap for my bindings and functions (H-l)")
+(define-key global-map (kbd "H-l") 'H-l-global-prefix)
+(fset 'H-l-global-prefix H-l-map)
+
+(define-key H-l-map "p" 'magit-pull-from-pushremote)
+(define-key H-l-map "P" 'magit-push-current)
+
 
 (prelude-require-packages '(dash-at-point
                             robe
@@ -52,7 +61,8 @@
                             rspec-mode
                             dumb-jump
                             rubocop
-                            bundler))
+                            bundler
+                            projectile-rails))
 
 (add-hook 'js2-mode-hook
           (lambda ()
@@ -70,6 +80,9 @@
 
 (setq dumb-jump-selector 'helm)
 (dumb-jump-mode)
+
+(projectile-rails-global-mode)
+(define-key projectile-rails-mode-map (kbd "H-e") 'projectile-rails-command-map)
 
 (setq neo-window-width 40)
 (setq neo-window-fixed-size nil)

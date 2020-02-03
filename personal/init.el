@@ -79,7 +79,8 @@
                             dumb-jump
                             rubocop
                             bundler
-                            projectile-rails))
+                            projectile-rails
+                            browse-at-remote))
 
 (add-hook 'js2-mode-hook
           (lambda ()

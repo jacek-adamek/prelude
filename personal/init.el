@@ -62,10 +62,10 @@
 (define-key global-map (kbd "H-m") 'H-magit-global-prefix)
 (fset 'H-magit-global-prefix H-magit-map)
 
-(define-key H-magit-map "p" 'magit-pull-popup)
-(define-key H-magit-map "P" 'magit-push-popup)
-(define-key H-magit-map "b" 'magit-branch-popup)
-(define-key H-magit-map "s" 'magit-stash-popup)
+(define-key H-magit-map "p" 'magit-pull)
+(define-key H-magit-map "P" 'magit-push)
+(define-key H-magit-map "b" 'magit-branch)
+(define-key H-magit-map "s" 'magit-stash)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (prelude-require-packages '(dash-at-point

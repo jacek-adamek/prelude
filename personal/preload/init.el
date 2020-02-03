@@ -15,3 +15,5 @@
 (scroll-bar-mode -1)
 (size-indication-mode t)
 (tool-bar-mode nil)
+(setq tab-width 4)
+(setq tab-stop-list '(4 8))

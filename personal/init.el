@@ -44,6 +44,8 @@
 (global-set-key (kbd "H-R") 'rubocop-autocorrect-current-file)
 (global-set-key (kbd "H-g") 'keyboard-escape-quit)
 (global-set-key (kbd "H-SPC") 'set-mark-command)
+(global-set-key (kbd "H-[") 'indent-rigidly-left-to-tab-stop)
+(global-set-key (kbd "H-]") 'indent-rigidly-right-to-tab-stop)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; H-l key map
@@ -89,6 +91,10 @@
 (add-hook 'haskell-mode-hook 'intero-mode)
 
 (add-hook 'ruby-mode-hook 'enh-ruby-mode)
+(add-hook 'ruby-mode-hook
+          (lambda ()
+            (setq tab-width 2)
+            (setq tab-stop-list '(2 4))))
 
 (add-hook 'elixir-mode-hook 'alchemist-mode)
 

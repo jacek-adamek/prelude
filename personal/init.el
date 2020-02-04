@@ -42,8 +42,8 @@
 (global-set-key (kbd "H-t") 'rspec-verify)
 (global-set-key (kbd "H-r") 'rspec-verify-single)
 (global-set-key (kbd "H-R") 'rubocop-autocorrect-current-file)
-(global-set-key (kbd "H-g") 'keyboard-escape-quit)
-(global-set-key (kbd "H-SPC") 'set-mark-command)
+(global-set-key (kbd "H-x") 'keyboard-escape-quit)
+(global-set-key (kbd "H-z") 'set-mark-command)
 (global-set-key (kbd "H-[") 'indent-rigidly-left-to-tab-stop)
 (global-set-key (kbd "H-]") 'indent-rigidly-right-to-tab-stop)
 

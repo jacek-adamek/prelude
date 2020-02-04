@@ -91,10 +91,6 @@
 (add-hook 'haskell-mode-hook 'intero-mode)
 
 (add-hook 'ruby-mode-hook 'enh-ruby-mode)
-(add-hook 'ruby-mode-hook
-          (lambda ()
-            (setq tab-width 2)
-            (setq tab-stop-list '(2 4))))
 
 (add-hook 'elixir-mode-hook 'alchemist-mode)
 

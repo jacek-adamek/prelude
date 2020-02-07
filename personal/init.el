@@ -42,10 +42,9 @@
 (global-set-key (kbd "H-t") 'rspec-verify)
 (global-set-key (kbd "H-r") 'rspec-verify-single)
 (global-set-key (kbd "H-R") 'rubocop-autocorrect-current-file)
-(global-set-key (kbd "H-x") 'keyboard-escape-quit)
-(global-set-key (kbd "H-z") 'set-mark-command)
 (global-set-key (kbd "H-[") 'indent-rigidly-left-to-tab-stop)
 (global-set-key (kbd "H-]") 'indent-rigidly-right-to-tab-stop)
+(global-set-key (kbd "H-d") 'isearch-forward-symbol-at-point)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; H-l key map
@@ -97,6 +96,10 @@
 (add-hook 'prelude-prog-mode-hook
           (lambda ()
             (guru-mode -1)) t)
+
+(add-hook 'web-mode-hook
+          (lambda()
+            (setq web-mode-markup-indent-offset 2)))
 
 (setq dumb-jump-selector 'helm)
 (dumb-jump-mode)

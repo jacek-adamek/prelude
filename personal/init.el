@@ -22,7 +22,7 @@
 (global-set-key (kbd "<M-s-up>") 'dumb-jump-back)
 (global-set-key (kbd "<M-s-right>") 'next-buffer)
 (global-set-key (kbd "<M-s-left>") 'previous-buffer)
-(global-set-key (kbd "H-P") 'helm-M-x)
+(global-set-key (kbd "H-P") 'projectile-switch-project)
 (global-set-key (kbd "H-h") 'dash-at-point)
 (global-set-key (kbd "H-H") 'dash-at-point-with-docset)
 (global-set-key (kbd "H-p") 'helm-projectile-find-file)
@@ -45,6 +45,7 @@
 (global-set-key (kbd "H-]") 'indent-rigidly-right-to-tab-stop)
 (global-set-key (kbd "H-d") 'isearch-forward-symbol-at-point)
 (global-set-key (kbd "H-D") 'isearch-forward)
+(global-set-key (kbd "s-P") 'helm-M-x)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; H-l key map

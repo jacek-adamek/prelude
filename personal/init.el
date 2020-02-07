@@ -44,6 +44,7 @@
 (global-set-key (kbd "H-[") 'indent-rigidly-left-to-tab-stop)
 (global-set-key (kbd "H-]") 'indent-rigidly-right-to-tab-stop)
 (global-set-key (kbd "H-d") 'isearch-forward-symbol-at-point)
+(global-set-key (kbd "H-D") 'isearch-forward)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; H-l key map

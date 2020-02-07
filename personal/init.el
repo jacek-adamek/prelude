@@ -46,6 +46,7 @@
 (global-set-key (kbd "H-d") 'isearch-forward-symbol-at-point)
 (global-set-key (kbd "H-D") 'isearch-forward)
 (global-set-key (kbd "s-P") 'helm-M-x)
+(global-set-key (kbd "<escape>") 'keyboard-escape-quit)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; H-l key map

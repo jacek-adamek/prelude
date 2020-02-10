@@ -40,9 +40,8 @@
 (global-set-key (kbd "H-/") 'comment-dwim)
 (global-set-key (kbd "H-?") 'comment-line)
 (global-set-key (kbd "H-t") 'rspec-verify)
-(global-set-key (kbd "H-T") 'rspec-verify-single)
-(global-set-key (kbd "H-r") 'rubocop-autocorrect-current-file)
-(global-set-key (kbd "H-R") 'rubocop-check-current-file)
+(global-set-key (kbd "H-r") 'rspec-verify-single)
+(global-set-key (kbd "H-R") 'rubocop-autocorrect-current-file)
 (global-set-key (kbd "H-[") 'indent-rigidly-left-to-tab-stop)
 (global-set-key (kbd "H-]") 'indent-rigidly-right-to-tab-stop)
 (global-set-key (kbd "H-d") 'isearch-forward-symbol-at-point)
@@ -61,6 +60,7 @@
 (fset 'H-l-global-prefix H-l-map)
 
 (define-key H-l-map "f" 'neotree-find)
+(define-key H-l-map "r" 'rubocop-check-current-file)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

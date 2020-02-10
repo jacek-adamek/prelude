@@ -74,6 +74,7 @@
 (define-key H-magit-map "P" 'magit-push)
 (define-key H-magit-map "b" 'magit-branch)
 (define-key H-magit-map "s" 'magit-stash)
+(define-key H-magit-map "m" 'magit-merge)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (prelude-require-packages '(dash-at-point

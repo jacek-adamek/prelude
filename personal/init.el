@@ -52,6 +52,14 @@
 (global-set-key (kbd "H-U") 'helm-imenu-in-all-buffers)
 (global-set-key (kbd "H-x") 'keyboard-escape-quit)
 
+;; Potentially shift key + cursors keys can be used for selection
+;; providing that keybindings for windmove are unset
+;; (global-unset-key (kbd "S-<left>"))
+;; (global-unset-key (kbd "S-<right>"))
+;; (global-unset-key (kbd "S-<up>"))
+;; (global-unset-key (kbd "S-<down>"))
+
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; H-l key map
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

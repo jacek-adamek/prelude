@@ -34,8 +34,8 @@
 (global-set-key (kbd "H-q") 'delete-other-windows)
 (global-set-key (kbd "H-Q") 'delete-window)
 (global-set-key (kbd "H-s") 'magit-status)
-(global-set-key (kbd "H-b") 'helm-mini)
-(global-set-key (kbd "H-B") 'helm-buffers-list)
+(global-set-key (kbd "H-b") 'helm-buffers-list)
+(global-set-key (kbd "H-B") 'projectile-switch-to-buffer)
 (global-set-key (kbd "H-o") 'helm-find-files)
 (global-set-key (kbd "H-/") 'comment-dwim)
 (global-set-key (kbd "H-?") 'comment-line)
@@ -50,7 +50,7 @@
 (global-set-key (kbd "H-a") 'set-mark-command)
 (global-set-key (kbd "H-u") 'helm-semantic-or-imenu)
 (global-set-key (kbd "H-U") 'helm-imenu-in-all-buffers)
-(global-set-key (kbd "<escape>") 'keyboard-escape-quit)
+(global-set-key (kbd "H-x") 'keyboard-escape-quit)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; H-l key map

@@ -26,8 +26,7 @@
 (global-set-key (kbd "H-h") 'dash-at-point)
 (global-set-key (kbd "H-H") 'dash-at-point-with-docset)
 (global-set-key (kbd "H-p") 'helm-projectile-find-file)
-(global-set-key (kbd "H-s") 'swiper)
-(global-set-key (kbd "H-S") 'projectile-ag)
+(global-set-key (kbd "H-s") 'helm-ag--run-save-buffer)
 (global-set-key (kbd "H-n") 'neotree-toggle)
 (global-set-key (kbd "H-N") 'neotree-projectile-action)
 (global-set-key (kbd "H-.") 'projectile-toggle-between-implementation-and-test)
@@ -54,6 +53,11 @@
 (global-set-key (kbd "H-\\") 'browse-at-remote)
 (global-set-key (kbd "H-|") 'browse-at-remote-kill)
 
+;; Remap swiper and isearch-forward
+(global-set-key (kbd "s-f") 'swiper)
+(global-set-key (kbd "s-F") 'projectile-ag)
+(global-set-key (kbd "C-s") 'isearch-forward)
+
 ;; Potentially shift key + cursors keys can be used for selection
 ;; providing that keybindings for windmove are unset
 (global-unset-key (kbd "S-<left>"))
@@ -74,7 +78,6 @@
 
 (define-key H-l-map "f" 'neotree-find)
 (define-key H-l-map "r" 'rubocop-check-current-file)
-(define-key H-l-map "s" 'helm-ag--run-save-buffer)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

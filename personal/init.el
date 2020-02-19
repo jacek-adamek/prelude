@@ -61,6 +61,9 @@
 (global-unset-key (kbd "S-<up>"))
 (global-unset-key (kbd "S-<down>"))
 
+;; I don't want to remap 'switch-to-buffer' to 'ivy-switch-buffer'.
+;; Prefer helm to handle it instead.
+(define-key ivy-mode-map [remap switch-to-buffer] nil)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; H-l key map

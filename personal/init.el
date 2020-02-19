@@ -26,16 +26,16 @@
 (global-set-key (kbd "H-h") 'dash-at-point)
 (global-set-key (kbd "H-H") 'dash-at-point-with-docset)
 (global-set-key (kbd "H-p") 'helm-projectile-find-file)
-(global-set-key (kbd "H-i") 'swiper)
-(global-set-key (kbd "H-I") 'projectile-ag)
+(global-set-key (kbd "H-s") 'swiper)
+(global-set-key (kbd "H-S") 'projectile-ag)
 (global-set-key (kbd "H-n") 'neotree-toggle)
 (global-set-key (kbd "H-N") 'neotree-projectile-action)
 (global-set-key (kbd "H-.") 'projectile-toggle-between-implementation-and-test)
 (global-set-key (kbd "H-q") 'delete-other-windows)
 (global-set-key (kbd "H-Q") 'delete-window)
-(global-set-key (kbd "H-s") 'magit-status)
 (global-set-key (kbd "H-b") 'helm-buffers-list)
 (global-set-key (kbd "H-B") 'projectile-switch-to-buffer)
+(global-set-key (kbd "H-C-b") 'switch-to-buffer)
 (global-set-key (kbd "H-o") 'helm-find-files)
 (global-set-key (kbd "H-/") 'comment-dwim)
 (global-set-key (kbd "H-?") 'comment-line)
@@ -71,6 +71,7 @@
 
 (define-key H-l-map "f" 'neotree-find)
 (define-key H-l-map "r" 'rubocop-check-current-file)
+(define-key H-l-map "s" 'helm-ag--run-save-buffer)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -80,6 +81,7 @@
 (define-key global-map (kbd "H-m") 'H-magit-global-prefix)
 (fset 'H-magit-global-prefix H-magit-map)
 
+(define-key H-magit-map (kbd "H-m") 'magit-status)
 (define-key H-magit-map "p" 'magit-pull)
 (define-key H-magit-map "P" 'magit-push)
 (define-key H-magit-map "b" 'magit-branch)

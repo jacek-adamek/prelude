@@ -87,6 +87,11 @@
 (define-key H-magit-map "b" 'magit-branch)
 (define-key H-magit-map "s" 'magit-stash)
 (define-key H-magit-map "m" 'magit-merge)
+(define-key H-magit-map "B" 'magit-blame)
+(define-key H-magit-map "l" 'magit-log)
+(define-key H-magit-map "f" 'magit-log-buffer-file)
+(define-key H-magit-map "D" 'magit-diff)
+(define-key H-magit-map "d" 'magit-diff-buffer-file)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (prelude-require-packages '(dash-at-point

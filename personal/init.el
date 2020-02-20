@@ -44,7 +44,6 @@
 (global-set-key (kbd "H-[") 'indent-rigidly-left-to-tab-stop)
 (global-set-key (kbd "H-]") 'indent-rigidly-right-to-tab-stop)
 (global-set-key (kbd "H-d") 'isearch-forward-symbol-at-point)
-(global-set-key (kbd "H-C-d") 'query-replace)
 (global-set-key (kbd "H-SPC") 'helm-M-x)
 (global-set-key (kbd "H-a") 'set-mark-command)
 (global-set-key (kbd "H-u") 'helm-semantic-or-imenu)

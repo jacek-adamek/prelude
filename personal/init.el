@@ -29,6 +29,7 @@
 (global-set-key (kbd "H-s") 'helm-ag--run-save-buffer)
 (global-set-key (kbd "H-n") 'neotree-toggle)
 (global-set-key (kbd "H-N") 'neotree-projectile-action)
+(global-set-key (kbd "H-C-n") 'neotree-find)
 (global-set-key (kbd "H-.") 'projectile-toggle-between-implementation-and-test)
 (global-set-key (kbd "H-q") 'delete-other-windows)
 (global-set-key (kbd "H-Q") 'delete-window)
@@ -41,6 +42,7 @@
 (global-set-key (kbd "H-t") 'rspec-verify)
 (global-set-key (kbd "H-r") 'rspec-verify-single)
 (global-set-key (kbd "H-R") 'rubocop-autocorrect-current-file)
+(global-set-key (kbd "H-C-r") 'rubocop-check-current-file)
 (global-set-key (kbd "H-[") 'indent-rigidly-left-to-tab-stop)
 (global-set-key (kbd "H-]") 'indent-rigidly-right-to-tab-stop)
 (global-set-key (kbd "H-d") 'isearch-forward-symbol-at-point)
@@ -76,8 +78,7 @@
 (define-key global-map (kbd "H-l") 'H-l-global-prefix)
 (fset 'H-l-global-prefix H-l-map)
 
-(define-key H-l-map "f" 'neotree-find)
-(define-key H-l-map "r" 'rubocop-check-current-file)
+(define-key H-l-map "c" 'coffee-compile-buffer)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

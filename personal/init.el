@@ -29,6 +29,7 @@
 (global-set-key (kbd "H-N") 'neotree-projectile-action)
 (global-set-key (kbd "H-C-n") 'neotree-find)
 (global-set-key (kbd "H-.") 'projectile-toggle-between-implementation-and-test)
+(global-set-key (kbd "H->") 'rspec-toggle-spec-and-target-find-example)
 (global-set-key (kbd "H-q") 'delete-other-windows)
 (global-set-key (kbd "H-Q") 'delete-window)
 (global-set-key (kbd "H-b") 'helm-buffers-list)

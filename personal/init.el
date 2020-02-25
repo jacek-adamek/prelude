@@ -49,7 +49,6 @@
 (global-set-key (kbd "H-a") 'set-mark-command)
 (global-set-key (kbd "H-u") 'helm-semantic-or-imenu)
 (global-set-key (kbd "H-U") 'helm-imenu-in-all-buffers)
-(global-set-key (kbd "H-x") 'keyboard-escape-quit)
 (global-set-key (kbd "H-\\") 'browse-at-remote)
 (global-set-key (kbd "H-|") 'browse-at-remote-kill)
 

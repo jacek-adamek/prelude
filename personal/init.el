@@ -109,8 +109,6 @@
                             robe
                             enh-ruby-mode
                             intero
-                            lsp-mode
-                            lsp-ui
                             neotree
                             rspec-mode
                             dumb-jump
@@ -118,7 +116,8 @@
                             bundler
                             projectile-rails
                             browse-at-remote
-                            multiple-cursors))
+                            multiple-cursors
+                            elixir-mode))
 
 (add-hook 'js2-mode-hook
           (lambda ()
@@ -128,7 +127,14 @@
 
 (add-hook 'ruby-mode-hook 'enh-ruby-mode)
 
-(add-hook 'elixir-mode-hook 'alchemist-mode)
+(add-hook 'elixir-mode-hook
+          (lambda ()
+            (add-hook 'before-save-hook 'elixir-format nil t)
+            (lsp)))
+
+;; lsp configuration
+(setq lsp-diagnostic-package :flycheck)
+(add-to-list 'exec-path "~/Projects/elixir/elixir-ls/release")
 
 (add-hook 'prelude-prog-mode-hook
           (lambda ()

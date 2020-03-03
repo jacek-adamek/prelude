@@ -52,6 +52,8 @@
 (global-set-key (kbd "H-U") 'helm-imenu-in-all-buffers)
 (global-set-key (kbd "H-\\") 'browse-at-remote)
 (global-set-key (kbd "H-|") 'browse-at-remote-kill)
+(global-set-key (kbd "H-p") 'mc/mark-next-like-this)
+(global-set-key (kbd "H-P") 'mc/skip-to-next-like-this)
 
 ;; Remap swiper and isearch-forward
 (global-set-key (kbd "s-f") 'swiper)
@@ -77,6 +79,8 @@
 (fset 'H-l-global-prefix H-l-map)
 
 (define-key H-l-map "c" 'coffee-compile-buffer)
+(define-key H-l-map "l" 'mc/edit-lines)
+(define-key H-l-map "a" 'mc/mark-all-like-this)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -112,7 +116,8 @@
                             rubocop
                             bundler
                             projectile-rails
-                            browse-at-remote))
+                            browse-at-remote
+                            multiple-cursors))
 
 (add-hook 'js2-mode-hook
           (lambda ()

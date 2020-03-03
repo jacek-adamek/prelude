@@ -149,3 +149,5 @@
 
 (add-to-list 'dash-at-point-mode-alist '(enh-ruby-mode . "ruby,rails,rubygems"))
 (add-to-list 'dash-at-point-mode-alist '(elixir-mode . "elixir,erlang"))
+
+(setq helm-buffer-max-length nil)

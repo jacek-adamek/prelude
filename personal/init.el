@@ -35,6 +35,7 @@
 (global-set-key (kbd "H-b") 'helm-buffers-list)
 (global-set-key (kbd "H-B") 'projectile-switch-to-buffer)
 (global-set-key (kbd "H-C-b") 'switch-to-buffer)
+(global-set-key (kbd "H-i") 'ibuffer)
 (global-set-key (kbd "H-o") 'helm-find-files)
 (global-set-key (kbd "H-/") 'comment-dwim)
 (global-set-key (kbd "H-?") 'comment-line)

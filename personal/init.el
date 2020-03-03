@@ -155,5 +155,6 @@
 
 (add-to-list 'dash-at-point-mode-alist '(enh-ruby-mode . "ruby,rails,rubygems"))
 (add-to-list 'dash-at-point-mode-alist '(elixir-mode . "elixir,erlang"))
+(add-to-list 'dash-at-point-mode-alist '(coffee-mode . "javascript,angularjs,underscore"))
 
 (setq helm-buffer-max-length nil)

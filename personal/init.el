@@ -36,6 +36,7 @@
 (global-set-key (kbd "H-B") 'projectile-switch-to-buffer)
 (global-set-key (kbd "H-C-b") 'switch-to-buffer)
 (global-set-key (kbd "H-i") 'ibuffer)
+(global-set-key (kbd "H-I") 'projectile-ibuffer)
 (global-set-key (kbd "H-o") 'helm-find-files)
 (global-set-key (kbd "H-/") 'comment-dwim)
 (global-set-key (kbd "H-?") 'comment-line)
@@ -53,8 +54,13 @@
 (global-set-key (kbd "H-U") 'helm-imenu-in-all-buffers)
 (global-set-key (kbd "H-\\") 'browse-at-remote)
 (global-set-key (kbd "H-|") 'browse-at-remote-kill)
-(global-set-key (kbd "H-p") 'mc/mark-next-like-this)
-(global-set-key (kbd "H-P") 'mc/skip-to-next-like-this)
+(global-set-key (kbd "H-k") 'mc/mark-next-like-this)
+(global-set-key (kbd "H-K") 'mc/skip-to-next-like-this)
+(global-set-key (kbd "H-p") 'projectile-find-file)
+(global-set-key (kbd "H-P") 'projectile-switch-open-project)
+(global-set-key (kbd "H-C-p") 'projectile-switch-project)
+(global-set-key (kbd "s-R") 'projectile-recentf)
+(global-set-key (kbd "<escape>") 'keyboard-escape-quit)
 
 ;; Remap swiper and isearch-forward
 (global-set-key (kbd "s-f") 'swiper)

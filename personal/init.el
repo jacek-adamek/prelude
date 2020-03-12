@@ -123,7 +123,8 @@
                             projectile-rails
                             browse-at-remote
                             multiple-cursors
-                            elixir-mode))
+                            elixir-mode
+                            exunit))
 
 (add-hook 'js2-mode-hook
           (lambda ()

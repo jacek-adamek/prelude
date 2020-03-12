@@ -29,7 +29,6 @@
 (global-set-key (kbd "H-N") 'neotree-projectile-action)
 (global-set-key (kbd "H-C-n") 'neotree-find)
 (global-set-key (kbd "H-.") 'projectile-toggle-between-implementation-and-test)
-(global-set-key (kbd "H->") 'rspec-toggle-spec-and-target-find-example)
 (global-set-key (kbd "H-q") 'delete-other-windows)
 (global-set-key (kbd "H-Q") 'delete-window)
 (global-set-key (kbd "H-b") 'helm-buffers-list)
@@ -40,10 +39,6 @@
 (global-set-key (kbd "H-o") 'helm-find-files)
 (global-set-key (kbd "H-/") 'comment-dwim)
 (global-set-key (kbd "H-?") 'comment-line)
-(global-set-key (kbd "H-t") 'rspec-verify)
-(global-set-key (kbd "H-r") 'rspec-verify-single)
-(global-set-key (kbd "H-R") 'rubocop-autocorrect-current-file)
-(global-set-key (kbd "H-C-r") 'rubocop-check-current-file)
 (global-set-key (kbd "H-[") 'indent-rigidly-left-to-tab-stop)
 (global-set-key (kbd "H-]") 'indent-rigidly-right-to-tab-stop)
 (global-set-key (kbd "H-d") 'isearch-forward-symbol-at-point)
@@ -132,12 +127,25 @@
 
 (add-hook 'haskell-mode-hook 'intero-mode)
 
-(add-hook 'ruby-mode-hook 'enh-ruby-mode)
+(add-hook 'ruby-mode-hook
+          (lambda ()
+            (enh-ruby-mode)
+            (local-set-key (kbd "H->") 'rspec-toggle-spec-and-target-find-example)
+            (local-set-key (kbd "H-t") 'rspec-verify)
+            (local-set-key (kbd "H-C-t") 'rspec-verify-all)
+            (local-set-key (kbd "H-r") 'rspec-verify-single)
+            (local-set-key (kbd "H-R") 'rubocop-autocorrect-current-file)
+            (local-set-key (kbd "H-C-r") 'rubocop-check-current-file)
+))
 
 (add-hook 'elixir-mode-hook
           (lambda ()
             (add-hook 'before-save-hook 'elixir-format nil t)
-            (lsp)))
+            (lsp)
+            (local-set-key (kbd "H->") 'exunit-toggle-file-and-test)
+            (local-set-key (kbd "H-t") 'exunit-verify)
+            (local-set-key (kbd "H-C-t") 'exunit-verify-all)
+            (local-set-key (kbd "H-r") 'exunit-verify-single)))
 
 ;; lsp configuration
 (setq lsp-diagnostic-package :flycheck)

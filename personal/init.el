@@ -150,6 +150,14 @@
 
 ;; lsp configuration
 (setq lsp-diagnostic-package :flycheck)
+
+(setq lsp-ui-doc-frame-parameters (cons (cons 'font machine-default-font)
+                                        lsp-ui-doc-frame-parameters))
+
+(add-hook 'lsp-ui-doc-frame-mode-hook
+          (lambda ()
+            (display-line-numbers-mode t)))
+
 (add-to-list 'exec-path "~/Projects/elixir/elixir-ls/release")
 
 (add-hook 'prelude-prog-mode-hook

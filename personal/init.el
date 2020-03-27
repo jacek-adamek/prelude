@@ -119,7 +119,8 @@
                             browse-at-remote
                             multiple-cursors
                             elixir-mode
-                            exunit))
+                            exunit
+                            go-mode))
 
 (add-hook 'js2-mode-hook
           (lambda ()
@@ -158,6 +159,13 @@
 (add-hook 'web-mode-hook
           (lambda()
             (setq web-mode-markup-indent-offset 2)))
+
+(add-hook 'go-mode-hook
+          (lambda ()
+            (add-hook 'before-save-hook #'lsp-format-buffer t t)
+            (add-hook 'before-save-hook #'lsp-organize-imports t t)
+            (whitespace-toggle-options '(tabs))
+            (lsp)))
 
 (setq dumb-jump-selector 'helm)
 (dumb-jump-mode)

@@ -1,6 +1,9 @@
-(if (string-equal (system-name) "MacMini.local")
-    (set-frame-font "DejaVu Sans Mono-15")
-    (set-frame-font "DejaVu Sans Mono-14"))
+(defvar machine-default-font
+  (if (string-equal (system-name) "MacMini.local")
+      "DejaVu Sans Mono-15"
+      "DejaVu Sans Mono-14"))
+
+(set-frame-font machine-default-font)
 
 (setq-default line-spacing 1)
 ;;(set-frame-font "Monaco 13")

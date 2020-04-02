@@ -10,6 +10,8 @@
 
 (setq whitespace-line-column 101) ;; limit line length
 
+(defvar project-switch-mode nil)
+
 (global-set-key (kbd "s-<") 'avy-goto-char-in-line)
 (global-set-key (kbd "s-:") 'avy-goto-word-1)
 (global-set-key (kbd "s-;") 'avy-goto-char)
@@ -52,8 +54,14 @@
 (global-set-key (kbd "H-k") 'mc/mark-next-like-this)
 (global-set-key (kbd "H-K") 'mc/skip-to-next-like-this)
 (global-set-key (kbd "H-p") 'projectile-find-file)
-(global-set-key (kbd "H-P") 'projectile-switch-project)
-(global-set-key (kbd "H-C-p") 'projectile-switch-open-project)
+(global-set-key (kbd "H-P") (lambda ()
+                              (interactive)
+                              (setq project-switch-mode 'not-opened-project)
+                              (helm-projectile-switch-project)))
+(global-set-key (kbd "H-C-p") (lambda ()
+                                (interactive)
+                                (setq project-switch-mode 'opened-project)
+                                (projectile-switch-open-project)))
 (global-set-key (kbd "s-R") 'projectile-recentf)
 (global-set-key (kbd "<escape>") 'keyboard-escape-quit)
 
@@ -180,6 +188,14 @@
 
 (projectile-rails-global-mode)
 (define-key projectile-rails-mode-map (kbd "H-e") 'projectile-rails-command-map)
+
+(setq projectile-switch-project-action (lambda ()
+                                         (interactive)
+                                         (pcase project-switch-mode
+                                           ('not-opened-project (helm-projectile-recentf))
+                                           ('opened-project (helm-projectile-switch-to-buffer))
+                                           (_ (helm-projectile-find-file)))
+                                         (setq project-switch-mode nil)))
 
 (setq neo-window-width 40)
 (setq neo-window-fixed-size nil)

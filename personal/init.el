@@ -91,7 +91,22 @@
 (define-key H-l-map "c" 'coffee-compile-buffer)
 (define-key H-l-map "l" 'mc/edit-lines)
 (define-key H-l-map "a" 'mc/mark-all-like-this)
+(define-key H-l-map "f" 'flycheck-list-errors)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; H-, key map
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(defvar H-comma-map (make-keymap) "Keymap for my bindings and functions (H-,)")
+(define-key global-map (kbd "H-,") 'H-comma-global-prefix)
+(fset 'H-comma-global-prefix H-comma-map)
+
+(define-key H-comma-map "j" 'lsp-find-definition)
+(define-key H-comma-map "J" 'lsp-ui-peek-find-definitions) ;
+(define-key H-comma-map "," 'xref-pop-marker-stack)
+(define-key H-comma-map "k" 'lsp-find-references)
+(define-key H-comma-map "K" 'lsp-ui-peek-find-references)
+(define-key H-comma-map "f" 'lsp-ui-flycheck-list)
+(define-key H-comma-map "l" 'lsp-find-type-definition)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; H-m key map

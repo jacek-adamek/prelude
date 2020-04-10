@@ -128,7 +128,8 @@
                             multiple-cursors
                             elixir-mode
                             exunit
-                            go-mode))
+                            go-mode
+                            typescript-mode))
 
 (add-hook 'js2-mode-hook
           (lambda ()
@@ -182,6 +183,14 @@
             (add-hook 'before-save-hook #'lsp-organize-imports t t)
             (whitespace-toggle-options '(tabs))
             (lsp)))
+
+(add-hook 'typescript-mode-hook
+          (lambda ()
+            (add-hook 'before-save-hook #'lsp-format-buffer t t)
+            (add-hook 'before-save-hook #'lsp-organize-imports t t)
+            (lsp)
+            (setq flycheck-checker 'typescript-tslint)
+            (flycheck-add-next-checker 'typescript-tslint 'lsp)))
 
 (setq dumb-jump-selector 'helm)
 (dumb-jump-mode)

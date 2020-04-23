@@ -102,11 +102,11 @@
 
 (define-key H-comma-map "j" 'lsp-find-definition)
 (define-key H-comma-map "J" 'lsp-ui-peek-find-definitions) ;
-(define-key H-comma-map "," 'xref-pop-marker-stack)
 (define-key H-comma-map "k" 'lsp-find-references)
 (define-key H-comma-map "K" 'lsp-ui-peek-find-references)
 (define-key H-comma-map "f" 'lsp-ui-flycheck-list)
 (define-key H-comma-map "l" 'lsp-find-type-definition)
+(define-key H-comma-map (kbd "H-,") 'xref-pop-marker-stack)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; H-m key map
@@ -201,6 +201,7 @@
 
 (add-hook 'typescript-mode-hook
           (lambda ()
+            (setq-default typescript-indent-level 2)
             (add-hook 'before-save-hook #'lsp-format-buffer t t)
             (add-hook 'before-save-hook #'lsp-organize-imports t t)
             (lsp)

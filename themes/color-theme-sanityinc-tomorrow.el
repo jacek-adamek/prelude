@@ -173,7 +173,7 @@ names to which it refers are bound."
       (font-lock-comment-delimiter-face (:foreground ,comment :slant italic))
       (font-lock-comment-face (:foreground ,comment :slant italic))
       (font-lock-constant-face (:foreground ,blue))
-      (font-lock-doc-face (:foreground ,purple))
+      (font-lock-doc-face (:foreground ,comment :slant italic))
       (font-lock-doc-string-face (:foreground ,yellow))
       (font-lock-function-name-face (:foreground ,orange))
       (font-lock-keyword-face (:foreground ,green))
@@ -306,6 +306,8 @@ names to which it refers are bound."
       (mmm-code-submode-face (:background ,contrast-bg))
       (mmm-comment-submode-face (:inherit font-lock-comment-face))
       (mmm-output-submode-face (:background ,contrast-bg))
+
+      (elixir-attribute-face (:foreground "#BACBE1"))
 
       ;; Search
       (match (:foreground ,blue :background ,background :inverse-video t))

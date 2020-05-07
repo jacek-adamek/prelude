@@ -102,9 +102,9 @@
 
 (define-key H-j-map (kbd "H-j") 'lsp-find-definition)
 (define-key H-j-map (kbd "H-b") 'xref-pop-marker-stack)
-(define-key H-j-map (kbd "H-J") 'lsp-ui-peek-find-definitions) ;
+(define-key H-j-map (kbd "j") 'lsp-ui-peek-find-definitions) ;
 (define-key H-j-map (kbd "H-r") 'lsp-find-references)
-(define-key H-j-map (kbd "H-R") 'lsp-ui-peek-find-references)
+(define-key H-j-map (kbd "r") 'lsp-ui-peek-find-references)
 (define-key H-j-map (kbd "H-f") 'lsp-ui-flycheck-list)
 (define-key H-j-map (kbd "H-t") 'lsp-find-type-definition)
 

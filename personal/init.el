@@ -96,17 +96,17 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; H-, key map
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(defvar H-comma-map (make-keymap) "Keymap for my bindings and functions (H-,)")
-(define-key global-map (kbd "H-,") 'H-comma-global-prefix)
-(fset 'H-comma-global-prefix H-comma-map)
+(defvar H-j-map (make-keymap) "Keymap for my bindings and functions (H-,)")
+(define-key global-map (kbd "H-j") 'H-j-global-prefix)
+(fset 'H-j-global-prefix H-j-map)
 
-(define-key H-comma-map "j" 'lsp-find-definition)
-(define-key H-comma-map "J" 'lsp-ui-peek-find-definitions) ;
-(define-key H-comma-map "k" 'lsp-find-references)
-(define-key H-comma-map "K" 'lsp-ui-peek-find-references)
-(define-key H-comma-map "f" 'lsp-ui-flycheck-list)
-(define-key H-comma-map "l" 'lsp-find-type-definition)
-(define-key H-comma-map (kbd "H-,") 'xref-pop-marker-stack)
+(define-key H-j-map (kbd "H-j") 'lsp-find-definition)
+(define-key H-j-map (kbd "H-b") 'xref-pop-marker-stack)
+(define-key H-j-map (kbd "H-J") 'lsp-ui-peek-find-definitions) ;
+(define-key H-j-map (kbd "H-r") 'lsp-find-references)
+(define-key H-j-map (kbd "H-R") 'lsp-ui-peek-find-references)
+(define-key H-j-map (kbd "H-f") 'lsp-ui-flycheck-list)
+(define-key H-j-map (kbd "H-t") 'lsp-find-type-definition)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; H-m key map

@@ -161,7 +161,7 @@
             (local-set-key (kbd "H-r") 'rspec-verify-single)
             (local-set-key (kbd "H-R") 'rubocop-autocorrect-current-file)
             (local-set-key (kbd "H-C-r") 'rubocop-check-current-file)
-))
+            (local-set-key (kbd "C-H-M-r") 'rspec-rerun)))
 
 (add-hook 'elixir-mode-hook
           (lambda ()
@@ -170,7 +170,8 @@
             (local-set-key (kbd "H->") 'exunit-toggle-file-and-test)
             (local-set-key (kbd "H-t") 'exunit-verify)
             (local-set-key (kbd "H-C-t") 'exunit-verify-all)
-            (local-set-key (kbd "H-r") 'exunit-verify-single)))
+            (local-set-key (kbd "H-r") 'exunit-verify-single)
+            (local-set-key (kbd "C-H-M-r") 'exunit-rerun)))
 
 ;; lsp configuration
 (setq lsp-diagnostic-package :flycheck)

@@ -175,7 +175,7 @@
 
 ;; lsp configuration
 (setq lsp-diagnostic-package :flycheck)
-
+(setq lsp-ui-doc-delay 1)
 (setq lsp-ui-doc-frame-parameters (cons (cons 'font machine-default-font)
                                         lsp-ui-doc-frame-parameters))
 

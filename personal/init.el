@@ -10,7 +10,7 @@
 
 (setq whitespace-line-column 101) ;; limit line length
 
-(defvar project-switch-mode nil)
+(defvar open-buffer-list nil)
 
 (global-set-key (kbd "s-<") 'avy-goto-char-in-line)
 (global-set-key (kbd "s-:") 'avy-goto-word-1)
@@ -56,7 +56,7 @@
 (global-set-key (kbd "H-P") 'helm-projectile-switch-project)
 (global-set-key (kbd "H-C-p") (lambda ()
                                 (interactive)
-                                (setq project-switch-mode 'opened-project)
+                                (setq open-buffer-list t)
                                 (projectile-switch-open-project)))
 (global-set-key (kbd "C-H-M-p") 'projectile-recentf)
 (global-set-key (kbd "<escape>") 'keyboard-escape-quit)
@@ -213,10 +213,11 @@
 
 (setq projectile-switch-project-action (lambda ()
                                          (interactive)
-                                         (pcase project-switch-mode
-                                           ('opened-project (helm-projectile-switch-to-buffer))
-                                           (_ (helm-projectile-find-file)))
-                                         (setq project-switch-mode nil)))
+                                         (if open-buffer-list
+                                             (progn
+                                               (setq open-buffer-list nil)
+                                               (helm-projectile-switch-to-buffer))
+                                           (helm-projectile-find-file))))
 
 (setq neo-window-width 40)
 (setq neo-window-fixed-size nil)

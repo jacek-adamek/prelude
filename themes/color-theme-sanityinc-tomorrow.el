@@ -307,7 +307,7 @@ names to which it refers are bound."
       (mmm-comment-submode-face (:inherit font-lock-comment-face))
       (mmm-output-submode-face (:background ,contrast-bg))
 
-      (elixir-attribute-face (:foreground "#BACBE1"))
+      (elixir-attribute-face (:foreground ,red))
 
       ;; Search
       (match (:foreground ,blue :background ,background :inverse-video t))

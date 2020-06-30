@@ -122,7 +122,7 @@ executed."
                (selection . "#525252")
                (foreground . "#D5D0CB")
                (comment . "#858785")
-               (red . "#d54e53")
+               (red . "#DD7175")
                (orange . "#e78c45")
                (yellow . "#e7c547")
                (green . "#b9ca4a")

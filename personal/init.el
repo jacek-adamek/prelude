@@ -53,15 +53,12 @@
 (global-set-key (kbd "H-k") 'mc/mark-next-like-this)
 (global-set-key (kbd "H-K") 'mc/skip-to-next-like-this)
 (global-set-key (kbd "H-p") 'projectile-find-file)
-(global-set-key (kbd "H-P") (lambda ()
-                              (interactive)
-                              (setq project-switch-mode 'not-opened-project)
-                              (helm-projectile-switch-project)))
+(global-set-key (kbd "H-P") 'helm-projectile-switch-project)
 (global-set-key (kbd "H-C-p") (lambda ()
                                 (interactive)
                                 (setq project-switch-mode 'opened-project)
                                 (projectile-switch-open-project)))
-(global-set-key (kbd "s-R") 'projectile-recentf)
+(global-set-key (kbd "C-H-M-p") 'projectile-recentf)
 (global-set-key (kbd "<escape>") 'keyboard-escape-quit)
 
 ;; Remap swiper and isearch-forward
@@ -217,7 +214,6 @@
 (setq projectile-switch-project-action (lambda ()
                                          (interactive)
                                          (pcase project-switch-mode
-                                           ('not-opened-project (helm-projectile-recentf))
                                            ('opened-project (helm-projectile-switch-to-buffer))
                                            (_ (helm-projectile-find-file)))
                                          (setq project-switch-mode nil)))

@@ -174,6 +174,7 @@
 (setq lsp-ui-doc-delay 1)
 (setq lsp-ui-doc-frame-parameters (cons (cons 'font machine-default-font)
                                         lsp-ui-doc-frame-parameters))
+(setq lsp-rust-server 'rust-analyzer)
 
 (add-hook 'lsp-ui-doc-frame-mode-hook
           (lambda ()

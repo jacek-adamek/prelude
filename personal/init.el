@@ -157,7 +157,10 @@
             (local-set-key (kbd "H-r") 'rspec-verify-single)
             (local-set-key (kbd "H-R") 'rubocop-autocorrect-current-file)
             (local-set-key (kbd "H-C-r") 'rubocop-check-current-file)
-            (local-set-key (kbd "C-H-M-r") 'rspec-rerun)))
+            (local-set-key (kbd "C-H-M-r") 'rspec-rerun)
+            (setq-local flycheck-command-wrapper-function
+                        (lambda (command)
+                          (append '("bundle" "exec") command)))))
 
 (add-hook 'elixir-mode-hook
           (lambda ()
